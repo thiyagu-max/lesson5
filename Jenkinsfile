@@ -16,7 +16,7 @@ node('master') {
             }
             
         }
-        printMessage('Pipeline Complete')
+        printMessage('Pipeline Completed')
     }
 }
 
