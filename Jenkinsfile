@@ -1,7 +1,7 @@
 node('master') {
     stage("Fetch Source Code") {
         cleanWs()
-        git 'https://github.com/TrainingByPackt/Beginning-Jenkins.git'
+        git 'https://github.com/thiyagu-max/lesson5.git'
     }
     
     dir('.') {
