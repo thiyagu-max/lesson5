@@ -1,11 +1,14 @@
 node('master') {
     stage("Fetch Source Code") {
-        git 'https://github.com/TrainingByPackt/Beginning-Jenkins.git'
+        cleanWs()
+        git{[url: 'https://github.com/thiyagu-max/lesson5', branch: 'add-function-and-tests']}
     }
     
-    dir('Lesson5') {
+    dir('.') {
         printMessage('Running Pipeline')
         stage("Testing") {
+            sh 'ls -la'
+            sh 'apk add python2'
             sh 'python test_functions.py'
         }
         stage("Deployment") {
